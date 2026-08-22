@@ -1,0 +1,304 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { 
+  Activity, 
+  ArrowRight, 
+  Calendar, 
+  Stethoscope, 
+  FileText, 
+  Users, 
+  ShieldCheck, 
+  Heart, 
+  Sparkles,
+  Phone,
+  Clock,
+  CheckCircle2,
+  ChevronRight,
+  Pill,
+  Video
+} from 'lucide-react';
+import Navbar from '../components/Navbar';
+
+const LandingPage = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#FBF9F5] text-slate-800">
+      <Navbar />
+
+      {/* HERO SECTION (MATCHING REFERENCE IMAGE) */}
+      <section className="relative pt-10 pb-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-6 space-y-8">
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.15]">
+                  Our Healthcare <br />
+                  Solutions Meet <br />
+                  <span className="text-slate-950">Every Need</span>
+                </h1>
+
+                <p className="text-sm sm:text-base text-slate-600 max-w-md leading-relaxed font-normal">
+                  With a team of experienced professionals and cutting-edge technology, we strive to empower individuals.
+                </p>
+              </div>
+
+              {/* Get Started Button */}
+              <div>
+                <Link
+                  to="/register"
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-sm hover:shadow-warm transition-all duration-300 text-sm active:scale-95"
+                >
+                  Get Started
+                </Link>
+              </div>
+
+              {/* Stats Ribbon (400+ Expert Doctor, 500+ Recover Patients, 97% Satisfied Rate) */}
+              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-lg">
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">400+</div>
+                  <div className="text-xs text-slate-500 font-medium mt-0.5">Expert Doctor</div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">500+</div>
+                  <div className="text-xs text-slate-500 font-medium mt-0.5">Recover Patients</div>
+                </div>
+                <div>
+                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-950 tracking-tight">97%</div>
+                  <div className="text-xs text-slate-500 font-medium mt-0.5">Satisfied Rate</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Graphic Mask (Stylized Rounded Capsule Collage matching Reference Image) */}
+            <div className="lg:col-span-6 relative flex items-center justify-center">
+              {/* Decorative floating dots */}
+              <div className="absolute top-10 right-8 w-4 h-4 bg-amber-400 rounded-full" />
+              <div className="absolute bottom-12 left-10 w-3 h-3 bg-amber-500 rounded-full" />
+              <div className="absolute top-1/2 -right-4 w-12 h-12 bg-teal-200/60 rounded-full blur-sm" />
+
+              {/* Diagonal Rounded Capsule Container */}
+              <div className="relative w-full max-w-md h-[460px] flex items-center justify-center">
+                {/* Main center capsule */}
+                <div className="w-56 h-[380px] bg-gradient-to-b from-slate-200 to-slate-300 rounded-full overflow-hidden shadow-2xl rotate-[35deg] border-4 border-white relative z-10 flex items-center justify-center group">
+                  <div className="-rotate-[35deg] scale-125 w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 p-4 text-center">
+                    <div className="w-20 h-20 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-600 mb-2">
+                      <Stethoscope className="w-10 h-10" />
+                    </div>
+                    <span className="text-xs font-bold text-slate-800">Certified Clinicians</span>
+                    <span className="text-[10px] text-slate-500">Board Specialists</span>
+                  </div>
+                </div>
+
+                {/* Left Offset Capsule */}
+                <div className="absolute -left-4 top-12 w-48 h-[320px] bg-gradient-to-b from-teal-100 to-teal-200 rounded-full overflow-hidden shadow-lg rotate-[35deg] border-4 border-white z-0 flex items-center justify-center opacity-90">
+                  <div className="-rotate-[35deg] text-center p-4">
+                    <Activity className="w-8 h-8 text-teal-600 mx-auto mb-1" />
+                    <span className="text-[11px] font-bold text-teal-900">24/7 Operations</span>
+                  </div>
+                </div>
+
+                {/* Right Offset Capsule */}
+                <div className="absolute -right-4 bottom-8 w-44 h-[300px] bg-gradient-to-b from-amber-100 to-amber-200 rounded-full overflow-hidden shadow-lg rotate-[35deg] border-4 border-white z-20 flex items-center justify-center">
+                  <div className="-rotate-[35deg] text-center p-4">
+                    <FileText className="w-8 h-8 text-amber-700 mx-auto mb-1" />
+                    <span className="text-[11px] font-bold text-amber-950">Digital Rx Verified</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES SECTION (MATCHING REFERENCE IMAGE) */}
+      <section id="services" className="py-20 bg-[#F5EFE6]/60 border-t border-b border-amber-100/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            <div className="lg:col-span-6">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+                We Offer a Wide Range of <br />
+                Unique Services
+              </h2>
+            </div>
+            <div className="lg:col-span-6">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-md">
+                Journey to better health and wellbeing. Treatment for specific condition simple looking to improve, and reflects the tone you want to convey to you.
+              </p>
+            </div>
+          </div>
+
+          {/* 3 Main Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Card 1: Virtual Consultation */}
+            <div className="warm-card p-6 bg-white flex flex-col justify-between space-y-6 hover:shadow-warm transition-all duration-300">
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-slate-900">Virtual Consultation</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Virtual consultation services are increasingly popular in the health industry, especially given recent technological advancements.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl h-44 bg-gradient-to-tr from-slate-100 to-amber-50 border border-slate-100 overflow-hidden flex flex-col items-center justify-center p-4">
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-500 mb-2">
+                  <Video className="w-7 h-7" />
+                </div>
+                <span className="text-xs font-semibold text-slate-700">Telehealth HD Video</span>
+
+                {/* Bottom Right Circular Orange Arrow */}
+                <Link
+                  to="/register"
+                  className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-amber-500 hover:bg-amber-600 text-white flex items-center justify-center shadow-md transition-transform hover:scale-105"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2: Make Appointment */}
+            <div className="warm-card p-6 bg-white flex flex-col justify-between space-y-6 hover:shadow-warm transition-all duration-300">
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-slate-900">Make Appointment</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Whether you're seeking medical advice, follow-up care, or simply have questions about your health and physician availability.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl h-44 bg-gradient-to-tr from-slate-100 to-teal-50 border border-slate-100 overflow-hidden flex flex-col items-center justify-center p-4">
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-teal-600 mb-2">
+                  <Calendar className="w-7 h-7" />
+                </div>
+                <span className="text-xs font-semibold text-slate-700">Zero-Conflict Slots</span>
+
+                {/* Bottom Right Circular Orange Arrow */}
+                <Link
+                  to="/login"
+                  className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-amber-500 hover:bg-amber-600 text-white flex items-center justify-center shadow-md transition-transform hover:scale-105"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3: Online Pharmacy & Prescriptions */}
+            <div className="warm-card p-6 bg-white flex flex-col justify-between space-y-6 hover:shadow-warm transition-all duration-300">
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-slate-900">Online Pharmacy & Digital Rx</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Our comprehensive digital prescriptions and medicine management ensures safe dosing, clear instructions, and instant verification.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl h-44 bg-gradient-to-tr from-slate-100 to-amber-50 border border-slate-100 overflow-hidden flex flex-col items-center justify-center p-4">
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 mb-2">
+                  <Pill className="w-7 h-7" />
+                </div>
+                <span className="text-xs font-semibold text-slate-700">Verified Electronic Rx</span>
+
+                {/* Bottom Right Circular Orange Arrow */}
+                <Link
+                  to="/login"
+                  className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-amber-500 hover:bg-amber-600 text-white flex items-center justify-center shadow-md transition-transform hover:scale-105"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="text-center pt-4">
+            <Link
+              to="/register"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-full font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-sm transition-all text-xs uppercase tracking-wider"
+            >
+              See More Services
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SPECIALTY ENROLLMENT STREAMLINED (MATCHING REFERENCE IMAGE) */}
+      <section className="py-20 bg-[#FBF9F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left 3 Feature Pills */}
+            <div className="lg:col-span-5 space-y-4">
+              <div className="p-4 rounded-3xl bg-[#F0EEFD] border border-purple-100 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-purple-600 shadow-sm font-bold">
+                  <Users className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm text-slate-900">Reduce Administrative</h4>
+                  <p className="text-xs text-slate-500">Popular industry especially technology</p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-3xl bg-[#E6F8F6] border border-teal-100 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-teal-600 shadow-sm font-bold">
+                  <Activity className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm text-slate-900">Streamline Communications</h4>
+                  <p className="text-xs text-slate-500">Popular industry especially technology</p>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-3xl bg-[#FFF6E9] border border-amber-100 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-amber-600 shadow-sm font-bold">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm text-slate-900">Accelerate Speed to Therapy</h4>
+                  <p className="text-xs text-slate-500">Popular industry especially technology</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Text Block */}
+            <div className="lg:col-span-7 space-y-6 lg:pl-8">
+              <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight">
+                Specialty Enrollment is <br />
+                Streamlined
+              </h2>
+              <p className="text-sm text-slate-600 leading-relaxed max-w-lg">
+                Feel free to customize this paragraph to better fit your brand's messaging, values, and specific offerings. Ensure that the language you use is clear, engaging, and reflects the tone you want to convey to your audience.
+              </p>
+              <div>
+                <Link
+                  to="/register"
+                  className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold text-white bg-amber-500 hover:bg-amber-600 shadow-sm hover:shadow-warm transition-all duration-300 text-sm"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="mt-auto py-8 bg-white border-t border-slate-200 text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <span className="font-extrabold text-slate-900 text-sm">ICOP</span>
+            <span>Clinical Operations Platform</span>
+          </div>
+          <div>
+            Built with React, Vite, Spring Boot 3, and MySQL
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default LandingPage;
